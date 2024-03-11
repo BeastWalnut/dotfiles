@@ -5,6 +5,11 @@ alias ~="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
 
+{{ if lookPath "nvim" -}}
+# nvim
+alias vim="nvim"
+
+{{ end -}}
 # ls command
 {{- if lookPath "eza" }}
 alias ls="eza --group-directories-first -F"

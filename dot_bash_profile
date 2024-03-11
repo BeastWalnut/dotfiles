@@ -1,4 +1,12 @@
 # SSH
 eval $(ssh-agent -s) &> /dev/null
 
-source ~/.bashrc
+# Set PATH so it includes user's private bin if it exists
+if [ -d "${HOME}/bin" ]; then
+	PATH="${HOME}/bin:${PATH}"
+fi
+
+# Custom bashrc
+if [ -f "${HOME}/bin" ]; then
+	source "${HOME}/.bash.sh"
+fi

@@ -1,0 +1,23 @@
+# Aliases
+if [ -f "${HOME}/.bash_aliases" ]; then
+	source "${HOME}/.bash_aliases"
+fi
+
+# Prompt teme
+eval "$(starship init bash)"
+
+# Editor
+export EDITOR={{ .editor | quote }}
+
+# When changing directory small typos can be ignored by bash
+# for example, cd /vr/lgo/apaache would find /var/log/apache
+shopt -s cdspell
+
+# Don't put duplicate lines in the history.
+export HISTCONTROL="ignoreboth"
+
+# Ignore some controlling instructions
+# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
+# The '&' is a special pattern which suppresses duplicate entries.
+export HISTIGNORE="history:exit:cls:ll:ls"
+
