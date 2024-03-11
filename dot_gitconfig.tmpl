@@ -1,0 +1,12 @@
+[user]
+	email = {{ .git_email | quote }}
+	name = {{ .git_user | quote }}
+
+[core]
+	editor = nvim
+
+[alias]
+	s = status -sb
+	last = log -1 HEAD --stat
+	unstage = reset HEAD --
+	undo = reset HEAD~1
