@@ -7,6 +7,6 @@ if [ -d "${HOME}/bin" ]; then
 fi
 
 # Custom bashrc
-if [ -f "${HOME}/bin" ]; then
+if [ -f "${HOME}/.bash.sh" ]; then
 	source "${HOME}/.bash.sh"
 fi
