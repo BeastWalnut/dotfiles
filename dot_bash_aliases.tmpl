@@ -1,0 +1,20 @@
+alias cls="clear"
+
+# Navigation
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+
+# ls command
+{{- if lookPath "eza" }}
+alias ls="eza --group-directories-first -F"
+alias lg="ll --git --git-ignore"
+{{ end -}}
+alias ll="ls -Ahl"
+alias la="ls -a"
+
+{{ if lookPath "bat" -}}
+# cat command
+alias cat="bat"
+
+{{ end -}}

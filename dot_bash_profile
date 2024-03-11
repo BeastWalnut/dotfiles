@@ -1,0 +1,4 @@
+# SSH
+eval $(ssh-agent -s) &> /dev/null
+
+source ~/.bashrc

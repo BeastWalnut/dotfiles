@@ -1,0 +1,12 @@
+# Aliases
+source ~/.bash_aliases
+
+# Prompt teme
+eval "$(starship init bash)"
+
+{{ if lookPath "nvim" -}}
+# Editor
+export EDITOR="nvim"
+alias vim="nvim"
+
+{{ end -}}
