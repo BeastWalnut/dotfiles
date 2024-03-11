@@ -1,0 +1,20 @@
+{{ if lookPath "sccache" -}}
+[build]
+rustc-wrapper = "sccache"
+
+{{ end -}}
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+strip = "symbols"
+panic = "abort"
+
+[alias]
+nag = """clippy --
+-W clippy::pedantic
+-W clippy::nursery
+-W clippy::unwrap_used
+-W clippy::expect_used
+-A clippy::missing_errors_doc
+"""
