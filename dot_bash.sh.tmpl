@@ -18,6 +18,11 @@ export HISTCONTROL="ignoreboth"
 
 # Ignore some controlling instructions
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
-# The '&' is a special pattern which suppresses duplicate entries.
-export HISTIGNORE="history:exit:cls:ll:ls"
 
+# exit and history commands
+HISTIGNORE="exit*( ):history*( )" 
+# cls command
+HISTIGNORE="cls*( ):${HISTIGNORE}" 
+# 1-2 character commands
+HISTIGNORE="?*( ):??*( ):${HISTIGNORE}" 
+export HISTIGNORE
