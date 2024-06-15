@@ -1,8 +1,7 @@
 #!/usr/bin/bash
 # Aliases
-if [ -f "${HOME}/.bash_aliases" ]; then
-    source "${HOME}/.bash_aliases"
-fi
+ALIASFILE="$HOME/.aliases.sh"
+[[ -f "$ALIASFILE" ]] && source "$ALIASFILE"
 
 # Prompt teme
 eval "$(starship init bash)"
@@ -21,9 +20,9 @@ export HISTCONTROL="ignoreboth"
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
 
 # exit and history commands
-HISTIGNORE="exit*( ):history*( )" 
+HISTIGNORE="exit*( ):history*( )"
 # cls command
-HISTIGNORE="cls*( ):${HISTIGNORE}" 
+HISTIGNORE="cls*( ):${HISTIGNORE}"
 # 1-2 character commands
-HISTIGNORE="?*( ):??*( ):${HISTIGNORE}" 
+HISTIGNORE="?*( ):??*( ):${HISTIGNORE}"
 export HISTIGNORE
