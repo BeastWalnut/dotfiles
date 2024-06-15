@@ -3,6 +3,9 @@
 ALIASFILE="$HOME/.aliases.sh"
 [[ -f "$ALIASFILE" ]] && source "$ALIASFILE"
 
+# Include local binaries in $PATH
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+
 # Prompt teme
 eval "$(starship init bash)"
 
