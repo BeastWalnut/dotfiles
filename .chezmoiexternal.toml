@@ -5,3 +5,7 @@
 {{ end }}
 type = "git-repo"
 url = "https://github.com/BeastWalnut/nvimrc.git"
+
+[".premake/ecc"]
+type = "git-repo"
+url = "https://github.com/MattBystrin/premake-ecc.git"
