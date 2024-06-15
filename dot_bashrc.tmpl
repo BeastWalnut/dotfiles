@@ -6,9 +6,11 @@ ALIASFILE="$HOME/.aliases.sh"
 # Include local binaries in $PATH
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
+{{ if lookPath "starship" -}}
 # Prompt teme
 eval "$(starship init bash)"
 
+{{ end -}}
 # Editor
 export EDITOR={{ .editor | quote }}
 
