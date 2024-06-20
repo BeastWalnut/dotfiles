@@ -3,9 +3,13 @@
 {{ else }}
 [".config/nvim"]
 {{ end }}
-type = "git-repo"
-url = "https://github.com/BeastWalnut/nvimrc.git"
-
+    type = "git-repo"
+    url = "https://github.com/BeastWalnut/nvimrc.git"
 [".premake/ecc"]
-type = "git-repo"
-url = "https://github.com/MattBystrin/premake-ecc.git"
+    type = "git-repo"
+    url = "https://github.com/MattBystrin/premake-ecc.git"
+["powerlevel10k"]
+    type = "git-repo"
+    url = "https://github.com/romkatv/powerlevel10k.git"
+    clone.args = ["--depth=1"]
+    pull.args = ["--depth=1"]
