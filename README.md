@@ -9,6 +9,7 @@ This repository manages these configuration files in Unix-Like systems.
 | `HOME`/.gitconfig         |
 | `HOME`/.zshrc             |
 | `HOME`/zsh                |
+| `HOME`/.tmux.conf         |
 | `HOME`/.aliases.sh        |
 | `HOME`/.ssh/config        |
 | `HOME`/.cargo/config.toml |
@@ -41,6 +42,7 @@ Any paths missing use the same one as Unix systems.
 ## Manually installed
 
 - `zsh`
+- `tmux`
 - `cargo`
 - `premake`
 - `neovim`
