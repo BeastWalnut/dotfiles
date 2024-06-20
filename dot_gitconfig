@@ -1,6 +1,6 @@
 [user]
-    email = {{ .git_email | quote }}
-    name = {{ .git_user | quote }}
+    email = "Dieguitoleyva12@gmail.com"
+    name = "BeastWalnut"
 
 [core]
     editor = nvim
