@@ -29,7 +29,11 @@ export PATH
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 autoload -Uz compinit && compinit
 
-setopt histignoredups histignorespace incappendhistorytime
+setopt histignoredups
+setopt histignorealldups
+setopt histignorespace
+setopt incappendhistorytime
+
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000

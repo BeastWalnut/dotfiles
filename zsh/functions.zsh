@@ -8,14 +8,14 @@ add-path () {
         return
     fi
 
-    dir="$1"
+    local npath="$1"
 
     case ":${PATH}:" in
-        *:"$dir":*)
+        *:"$npath":*)
             ;;
         *)
             # Prepending path in case a system-installed rustc needs to be overridden
-            export PATH="$dir:$PATH"
+            export PATH="$npath:$PATH"
             ;;
     esac
 }
